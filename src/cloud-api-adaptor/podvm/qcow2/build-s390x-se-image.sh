@@ -31,7 +31,7 @@ if [ "${PODVM_DISTRO}" = "rhel" ]; then
 
         if ! command -v cryptsetup &> /dev/null; then
             echo >&2 "cryptsetup is required but it's not installed. Installing now..."
-            sudo yum install cryptsetup -y >/dev/null 2>&1
+            sudo yum install cryptsetup -y
             if [ $? -ne 0 ]; then
                 echo >&2 "Failed to install cryptsetup. Aborting."
                 exit 1
